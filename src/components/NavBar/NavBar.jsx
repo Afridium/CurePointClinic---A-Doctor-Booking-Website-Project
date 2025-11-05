@@ -3,14 +3,14 @@ import { FaHandHoldingMedical } from "react-icons/fa";
 import { NavLink } from 'react-router';
 const NavBar = () => {
     const Links = <>
-        <NavLink to='/' className={({isActive}) => `nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>Home</NavLink>
-        <NavLink to='/bookings' className={({isActive}) => `nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>My Bookings</NavLink>
-        <NavLink to='/blogs' className={({isActive}) => `nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>Blogs</NavLink>
-        <NavLink to='/contact' className={({isActive}) => `nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>Contact Us</NavLink>
+        <NavLink to='/' className={({isActive}) => `lg:nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>Home</NavLink>
+        <NavLink to='/bookings' className={({isActive}) => `lg:nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>My Bookings</NavLink>
+        <NavLink to='/blogs' className={({isActive}) => `lg:nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>Blogs</NavLink>
+        <NavLink to='/contact' className={({isActive}) => `lg:nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>Contact Us</NavLink>
     </>
     return (
-        <div className='p-7'>
-            <div className="navbar shadow-sm rounded-4xl px-4 border-6 border-white">
+        <div className='md:p-7 p-3 w-full'>
+            <div className="navbar shadow-sm rounded-4xl md:px-4 border-6 border-white md:w-full w-[95%] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,7 +27,7 @@ const NavBar = () => {
                     </div>
                     <div>
                         <NavLink to='/'>
-                            <a className="flex gap-2 pl-1.5 text-xl font-black items-center"><FaHandHoldingMedical size={30} style={{color:"#176ae5"}} />CurePoint</a> 
+                            <div className="flex lg:gap-2 lg:pl-1.5 text-xl font-black items-center"><FaHandHoldingMedical size={30} style={{color:"#176ae5"}} />CurePoint</div> 
                         </NavLink>
                        
                     </div>
