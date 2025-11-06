@@ -1,7 +1,10 @@
 import React from 'react';
 
-const SingleDoctorCard = ({ doc }) => {
-    const { image, name, education, registration_number, experience } = doc;
+const SingleDoctorCard = ({ doc}) => {
+    
+    
+    
+    const { name, education, registration_number, experience } = doc;
     return (
         <div className='flex justify-center mx-auto mb-5 lg:w-80 md:w-80'>
             <div className="card bg-base-100 md:w-full w-[98%] shadow-sm  rounded-4xl">
@@ -29,6 +32,7 @@ const SingleDoctorCard = ({ doc }) => {
                     <button className='btn text-[#176ae5] border-[#176ae5] rounded-4xl font-bold'>View Details</button>
                 </div>
             </div>
+            
         </div>
     );
 };
