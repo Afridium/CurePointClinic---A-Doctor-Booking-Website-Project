@@ -7,7 +7,9 @@
     "speciality": "Internal Medicine",
     "experience": "12 years",
     "registration_number": "REG-IM-0012",
-    "fee": 800
+    "fee": 800,
+    "workplace": "Dhaka Medical College Hospital",
+    "availability_days": ["Sunday", "Tuesday", "Thursday"]
   },
   {
     "id": 2,
@@ -17,7 +19,9 @@
     "speciality": "Obstetrics & Gynaecology",
     "experience": "9 years",
     "registration_number": "REG-OB-0045",
-    "fee": 1200
+    "fee": 1200,
+    "workplace": "Square Hospital, Dhaka",
+    "availability_days": ["Monday", "Wednesday", "Saturday"]
   },
   {
     "id": 3,
@@ -27,7 +31,9 @@
     "speciality": "General Surgery",
     "experience": "15 years",
     "registration_number": "REG-SG-0103",
-    "fee": 1500
+    "fee": 1500,
+    "workplace": "United Hospital, Dhaka",
+    "availability_days": ["Sunday", "Monday", "Wednesday"]
   },
   {
     "id": 4,
@@ -37,7 +43,9 @@
     "speciality": "Paediatrics",
     "experience": "8 years",
     "registration_number": "REG-PD-0078",
-    "fee": 900
+    "fee": 900,
+    "workplace": "Ibn Sina Specialized Hospital",
+    "availability_days": ["Tuesday", "Thursday", "Friday"]
   },
   {
     "id": 5,
@@ -47,7 +55,9 @@
     "speciality": "Cardiology",
     "experience": "11 years",
     "registration_number": "REG-CD-0021",
-    "fee": 2000
+    "fee": 2000,
+    "workplace": "Evercare Hospital Dhaka",
+    "availability_days": ["Sunday", "Monday", "Thursday"]
   },
   {
     "id": 6,
@@ -57,7 +67,9 @@
     "speciality": "Community Medicine / Public Health",
     "experience": "7 years",
     "registration_number": "REG-PH-0034",
-    "fee": 700
+    "fee": 700,
+    "workplace": "Bangabandhu Sheikh Mujib Medical University (BSMMU)",
+    "availability_days": ["Monday", "Wednesday", "Friday"]
   },
   {
     "id": 7,
@@ -67,7 +79,9 @@
     "speciality": "Oral & Maxillofacial Surgery",
     "experience": "10 years",
     "registration_number": "REG-OM-0056",
-    "fee": 1300
+    "fee": 1300,
+    "workplace": "Popular Diagnostic Centre, Dhanmondi",
+    "availability_days": ["Sunday", "Tuesday", "Friday"]
   },
   {
     "id": 8,
@@ -77,7 +91,9 @@
     "speciality": "Neurology",
     "experience": "14 years",
     "registration_number": "REG-NL-0089",
-    "fee": 1800
+    "fee": 1800,
+    "workplace": "Labaid Specialized Hospital",
+    "availability_days": ["Monday", "Thursday", "Saturday"]
   },
   {
     "id": 9,
@@ -87,7 +103,9 @@
     "speciality": "Orthopaedic Surgery",
     "experience": "13 years",
     "registration_number": "REG-OR-0067",
-    "fee": 1600
+    "fee": 1600,
+    "workplace": "Green Life Medical College Hospital",
+    "availability_days": ["Sunday", "Tuesday", "Thursday"]
   },
   {
     "id": 10,
@@ -97,7 +115,9 @@
     "speciality": "Reproductive Health / Infertility",
     "experience": "6 years",
     "registration_number": "REG-RH-0110",
-    "fee": 1100
+    "fee": 1100,
+    "workplace": "Medinova Medical Services, Dhanmondi",
+    "availability_days": ["Monday", "Wednesday", "Friday"]
   },
   {
     "id": 11,
@@ -107,7 +127,9 @@
     "speciality": "Dermatology & Venereology",
     "experience": "9 years",
     "registration_number": "REG-DR-0092",
-    "fee": 1000
+    "fee": 1000,
+    "workplace": "Impulse Hospital",
+    "availability_days": ["Tuesday", "Thursday", "Saturday"]
   },
   {
     "id": 12,
@@ -117,6 +139,8 @@
     "speciality": "Ophthalmology",
     "experience": "5 years",
     "registration_number": "REG-OP-0125",
-    "fee": 950
+    "fee": 950,
+    "workplace": "Vision Eye Hospital, Dhaka",
+    "availability_days": ["Sunday", "Wednesday", "Friday"]
   }
 ]

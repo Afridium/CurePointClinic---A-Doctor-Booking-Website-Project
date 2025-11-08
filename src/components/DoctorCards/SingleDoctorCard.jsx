@@ -1,12 +1,13 @@
 import React from 'react';
-
+import { NavLink } from 'react-router';
+import { motion } from "motion/react"
 const SingleDoctorCard = ({ doc}) => {
     
     
     
-    const { name, education, registration_number, experience } = doc;
+    const {id, name, education, registration_number, experience } = doc;
     return (
-        <div className='flex justify-center mx-auto mb-5 lg:w-80 md:w-80'>
+        <motion.div initial={{scale:1}} whileHover={{scale:1.1}} className='flex justify-center mx-auto mb-5 lg:w-80 md:w-80'>
             <div className="card bg-base-100 md:w-full w-[98%] shadow-sm  rounded-4xl">
                 <figure className='w-full md:h-65 h-78 mx-auto p-5 rounded-3xl'>
                     <img
@@ -29,11 +30,14 @@ const SingleDoctorCard = ({ doc}) => {
                     <p className='flex items-center'>Reg No:
                         <span className='text-3xl text-[#0f0f0f99]'>®</span>
                         {registration_number}</p>
-                    <button className='btn text-[#176ae5] border-[#176ae5] rounded-4xl font-bold'>View Details</button>
+                        <NavLink to={`doctordetail/${id}`}>
+                            <button className='btn text-[#176ae5] border-[#176ae5] rounded-4xl font-bold w-full'>View Details</button>
+                        </NavLink>
+                    
                 </div>
             </div>
             
-        </div>
+        </motion.div>
     );
 };
 

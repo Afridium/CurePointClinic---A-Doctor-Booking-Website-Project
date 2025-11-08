@@ -4,7 +4,7 @@ import { NavLink } from 'react-router';
 const NavBar = () => {
     const Links = <>
         <NavLink to='/' className={({isActive}) => `lg:nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>Home</NavLink>
-        <NavLink to='/bookings' className={({isActive}) => `lg:nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>My Bookings</NavLink>
+        <NavLink to='/mybookings' className={({isActive}) => `lg:nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>My Bookings</NavLink>
         <NavLink to='/blogs' className={({isActive}) => `lg:nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>Blogs</NavLink>
         <NavLink to='/contact' className={({isActive}) => `lg:nav-link py-1 border-b-2 ${isActive ? 'border-black font-bold' : 'border-transparent'}`}>Contact Us</NavLink>
     </>

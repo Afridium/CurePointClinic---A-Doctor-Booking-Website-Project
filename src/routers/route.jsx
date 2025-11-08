@@ -6,6 +6,7 @@ import BookingPage from "../pages/BookingPage/BookingPage";
 import Blogs from "../pages/BlogsPage/Blogs";
 import Contact from "../pages/ContactPage/Contact"
 import Doctors from "../components/DoctorCards/Doctors";
+import DoctorDetail from "../pages/DoctorDetail/DoctorDetail";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -14,22 +15,31 @@ export const router = createBrowserRouter([
     children: [
         {
             index: true,
-            path: "/",
-            loader: () => fetch('./doctorData.json'),
+            loader: () => fetch('/doctorData.json').then(res => res.json()),
             Component: Home
         },
         {
-            path:"bookings",
+            path:"/bookings",
             Component: BookingPage
         },
         {
-            path:"blogs",
+            path:"/blogs",
             Component: Blogs
         },
         {
-            path:"contact",
+            path:"/contact",
             Component: Contact
         },
+        {
+            path:"/doctordetail/:id",
+            loader: () => fetch('/doctorData.json').then(res => res.json()),
+            Component: DoctorDetail
+        },
+        {
+            path:"/mybookings",
+            loader: () => fetch('/doctorData.json').then(res => res.json()),
+            Component: BookingPage
+        }
     ]
   },
 ]);

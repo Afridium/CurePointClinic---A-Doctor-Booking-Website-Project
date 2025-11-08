@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SingleDoctorCard from './SingleDoctorCard';
-
+import { motion } from "motion/react"
 const Doctors = ({ allDocs }) => {
     const [visibleCount, setVisibleCount] = useState(6);
     const toggleView = () => {
@@ -18,17 +18,17 @@ const Doctors = ({ allDocs }) => {
             </div>
 
             <div className='lg:flex lg:justify-center'>
-                <div className='md:grid lg:grid-cols-3 md:grid-cols-2 lg:gap-4'>
+                <div className='md:grid lg:grid-cols-3 md:grid-cols-2 lg:gap-8'>
                     {
                         allDocs.slice(0, visibleCount).map((doc) => <SingleDoctorCard key={doc.id} doc={doc}></SingleDoctorCard>)
                     }
                 </div>
 
             </div>
-            <div className='flex justify-center'>
-                <button onClick={() => toggleView()} className='btn bg-[#176ae5] text-white rounded-4xl '>
+            <div  className='flex justify-center mb-8 mt-5'>
+                <motion.button initial={{boxShadow: 0}} whileHover={{boxShadow: "0px 5px 20px rgba(0, 0, 0, 0.4)"}} transition={{duration:0.2, ease:'easeInOut'}} onClick={() => toggleView()} className='btn bg-[#176ae5] text-white rounded-4xl '>
                     {visibleCount < allDocs.length ? 'View More' : 'View Less'}
-                </button>
+                </motion.button>
             </div>
 
         </div>
