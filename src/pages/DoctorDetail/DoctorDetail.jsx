@@ -2,15 +2,32 @@ import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { BsExclamationSquare } from "react-icons/bs";
 import { addToLocalStorage } from '../../utilities/addtoLocalStorage';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 const DoctorDetail = () => {
-    const {id} = useParams();
+    const { id } = useParams();
     const docid = parseInt(id);
     const individualDoc = useLoaderData();
     console.log(individualDoc)
     const verify = individualDoc.find((id) => id.id === docid);
-    const {image, name, education, registration_number, experience, fee, workplace, availability_days } = verify;
+    const { image, name, education, registration_number, experience, fee, workplace, availability_days } = verify;
     const handleStoringBooking = () => {
         addToLocalStorage(docid);
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+        });
+        Toast.fire({
+            icon: "success",
+            title: "Added Successfully"
+        });
     }
     return (
         <div className='w-[90%] mx-auto p-3'>
@@ -35,7 +52,7 @@ const DoctorDetail = () => {
                         <p className='bg-[#ffa0001a] border-[#ffa00033] text-[#ffa000] rounded-2xl p-1.5'>{availability_days[2]}</p>
                     </div>
                     <div>
-                        <p className='font-bold'>Consultation Fee: 
+                        <p className='font-bold'>Consultation Fee:
                             <span className='font-bold text-blue-700'>Taka: {fee}</span>
                             <span className='text-[#14141480] text-xs'> (Incl. Vat)</span>
                             <span className='text-blue-600'> Per consultation</span>
@@ -49,13 +66,13 @@ const DoctorDetail = () => {
                 <div className='flex justify-between items-center'>
                     <h1 className='font-bold'>Availability</h1>
                     <p className='bg-[#ffa0001a] border-[#ffa00033] text-[#ffa000] rounded-2xl p-1.5'>Doctor Avaialable Today</p>
-                   
+
                 </div>
-                 <p className='bg-[#ffa0001a] border-[#ffa00033] text-[#ffa000] rounded-xl p-1.5 flex lg:flex-row flex-col items-center justify-center text-center gap-3.5'><BsExclamationSquare size={25}/>Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
-                 <button onClick={handleStoringBooking} className='btn btn-primary rounded-3xl'>Book Appointment Now</button>
+                <p className='bg-[#ffa0001a] border-[#ffa00033] text-[#ffa000] rounded-xl p-1.5 flex lg:flex-row flex-col items-center justify-center text-center gap-3.5'><BsExclamationSquare size={25} />Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
+                <button onClick={handleStoringBooking} className='btn btn-primary rounded-3xl'>Book Appointment Now</button>
             </div>
         </div>
     );
 };
 
-export default DoctorDetail;<h2>Doctor Detail</h2>
+export default DoctorDetail; <h2>Doctor Detail</h2>

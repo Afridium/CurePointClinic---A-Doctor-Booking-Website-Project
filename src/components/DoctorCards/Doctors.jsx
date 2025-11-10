@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import SingleDoctorCard from './SingleDoctorCard';
 import { motion } from "motion/react"
+
+
 const Doctors = ({ allDocs }) => {
     const [visibleCount, setVisibleCount] = useState(6);
     const toggleView = () => {

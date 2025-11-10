@@ -9,7 +9,7 @@ const Root = () => {
         <div className='bg-[#efefef] plus-jakarta-sans'>
             <NavBar></NavBar>
             <Outlet></Outlet>
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
         </div>
     );
 };
